@@ -1,0 +1,23 @@
+<h2>Create User</h2>
+
+<form ng-submit=create()>
+First Name:<input type="text" ng-model="newUser.firstName"><br>
+Last Name:<input type="text" ng-model="newUser.lastName"><br>	
+Email:<input type="text" ng-model="newUser.email"><br>
+Birthdate:<input type="date" ng-model="newUser.birthDate"><br>
+Password:<input type="password" ng-model="newUser.password"><br>
+Re-Password:<input type="password" ng-model="newUser.re_password"><br>
+<input type="submit" value="Create User">
+</form>
+
+
+<h2>Login</h2>
+<form ng-submit=login()>
+Email: <input type="text" ng-model="loginUser.email">
+Password: <input type="password" ng-model="loginUser.password">
+<input type="submit" value="Login">
+</form>
+
+<div ng-if="errors">
+<p ng-repeat="message in messages">{{message}}</p>
+</div>
